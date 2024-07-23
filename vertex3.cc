@@ -24,7 +24,7 @@ using namespace std;
 const double Rand =  RAND_MAX;
 double theta=(0.0)*PI;
 
-/*_/_/_/_/_/_/_/_/_/ Model prameters _/_/_/_/_/_/_/_/*/
+/*_/_/_/_/_/_/_/_/_/ Model prameters _/_/_/_/_/_/_/_/*/ 
 
 const int nn=129; /* number of vertices along the X- or Y-axis*/
 const int nfid=2*3*(nn-1)*(nn-1); /* number of faces */
