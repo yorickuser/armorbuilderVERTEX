@@ -1,4 +1,8 @@
-C++ program of vertex-spring method
+C++ programs of vertex-spring method
 
-See descriptions at the beginning of program files for compilation and execution.
-
+//<Operation environment>
+//OS: Utunbu 20.04
+//g++: g++-9.4.0
+//
+//Compilation: g++ [program file]
+//Execution: ./a.out -o output
