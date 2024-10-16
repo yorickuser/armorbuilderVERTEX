@@ -24,7 +24,7 @@ using namespace std;
 const double Rand =  RAND_MAX;
 double theta=(0.0)*PI;
 
-/*_/_/_/_/_/_/_/_/_/ Model prameters _/_/_/_/_/_/_/_/*/ 
+/*_/_/_/_/_/_/_/_/_/ Model prameters _/_/_/_/_/_/_/_/*/
 
 const int nn=129; /* number of vertices along the X- or Y-axis*/
 const int nfid=2*3*(nn-1)*(nn-1); /* number of faces */
@@ -985,7 +985,7 @@ void out_met_file(std::string met_filename){
 double tim;
 int outcount;
 
-main(int argc, char *argv[]){
+int main(int argc, char *argv[]){
   int opt;
   double buf;
    std::string ofile_name="gomi";
@@ -1018,11 +1018,11 @@ main(int argc, char *argv[]){
   /* calculation of spring growth correspongind to sheet growth */
   for(int i=0;i<ncon;i++)nabla2[i]=0.0;
    
-  develop(nabla2,morpha,d_gradx_cen,d_grady_cen,amp_tw_cen);
-  develop(nabla2,morpha_deko,-0*d_gradx_side,d_grady_side,-0*amp_tw_side);
-  develop(nabla2,morpha_sideL,0.15,0,amp_tw_side);
-  develop(nabla2,morpha_sideR,-0.15,0,-amp_tw_side);
-  develop(nabla2,morpha_head,d_gradx_cen,2*d_grady_cen,amp_tw_cen);
+  develop(nabla2,morpha,d_gradx_cen,d_grady_cen,amp_tw_cen);//beta1
+  develop(nabla2,morpha_deko,-0*d_gradx_side,d_grady_side,-0*amp_tw_side);//beta2
+  develop(nabla2,morpha_sideL,0.15,0,amp_tw_side);//beta3
+  develop(nabla2,morpha_sideR,-0.15,0,-amp_tw_side);//beta4
+  develop(nabla2,morpha_head,d_gradx_cen,2*d_grady_cen,amp_tw_cen);//beta5
 
   /* calculation of growth metric correspongind to sheet growth */
   for(int i=0;i<nn*nn;i++){
@@ -1033,11 +1033,11 @@ main(int argc, char *argv[]){
     metric[i][2]=0.0;
   }
   
-  calc_met(morpha,d_gradx_cen,d_grady_cen,amp_tw_cen);
-  calc_met(morpha_deko,-0*d_gradx_side,d_grady_side,-0*amp_tw_side);
-  calc_met(morpha_sideL,0.15,0,amp_tw_side);
-  calc_met(morpha_sideR,-0.15,0,-amp_tw_side);    
-  calc_met(morpha_head,d_gradx_cen,2*d_grady_cen,amp_tw_cen);
+  calc_met(morpha,d_gradx_cen,d_grady_cen,amp_tw_cen);//beta1
+  calc_met(morpha_deko,-0*d_gradx_side,d_grady_side,-0*amp_tw_side);//beta2
+  calc_met(morpha_sideL,0.15,0,amp_tw_side);//beta3
+  calc_met(morpha_sideR,-0.15,0,-amp_tw_side);//beta4    
+  calc_met(morpha_head,d_gradx_cen,2*d_grady_cen,amp_tw_cen);//beta5
   
   for(int i=0;i<nn*nn;i++){
     metric[i][0]=1.0+develop_time*metric[i][0];
@@ -1098,7 +1098,7 @@ main(int argc, char *argv[]){
     
     for(int i=0;i<nn*nn;i++){
       for(int k=0;k<3;k++)v[i][k]+=(F[i][k]-gF[k])*dt;
-      if((edgemask[i]==1)){
+      if(edgemask[i]==1){
 	if(v[i][2]>0.0)v[i][2]=0.0;
       }
     }
