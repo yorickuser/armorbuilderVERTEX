@@ -25,12 +25,12 @@ yorickvis can be quickly installed under armorbuilderVERTEX/
 by following commands (using git):
 
 cd armorbuilderVERTEX/
-git clone https://github.com/yorickuser/yorickvis.git -b 0.1
+git clone https://github.com/yorickuser/yorickvis.git -b 0.11
 cd yorickvis/
 ./install.sh
 cd ../
 
-Install of yorickvis produces a symbolic link "Yorick" at home directory, by which you can easily run yorickvis by typing "~/Yorick/yorickvis" or "~/Yorick/yorickvisf".
+Install of yorickvis produces a symbolic link "Yorick" at home directory, by which you can easily run yorickvis by typing "~/Yorick/yorickvis".
 
 yorickvis is uninstalled by removing "~/Yorick" and "armorbuilderVERTEX/yorickvis".
 
@@ -63,8 +63,6 @@ Typing "quit" ends yorick, returning to the normal console prompt.
 Title: Growth regulation bringing modularity to morphogenesis of complex three-dimensional exoskeletons
 
 Author: Hiroshi C. Ito and Yu Uchiumi
-
-DOI: 10.1098/rspb.2024.1943
 
 Abstract:
 Diverse three-dimensional morphologies of arthropods’ outgrowths, including beetle horns, are formed through the non-uniform growth of epidermis. Prior to moulting, epidermal tissue peels off from the old cuticle and grows non-uniformly to shape protruding structures, which are often branching, curving, or twisting, from the planar epidermis. This non-uniform growth is possibly regulated by the distribution of morphogens on the epidermal cell sheet. Previous studies have identified molecules and signalling pathways related to such morphogenesis; however, how local regulation of cell sheet growth can transform planar epidermis globally into complex three-dimensional structures, such as beetle horns, remains unclear. To reveal the relationship between epidermal growth regulation and generated structures, this study theoretically examined how various shapes can be generated from planar epidermis under a deductive growth model that corresponds morphogen distributions to non-uniform growth on tissue. The results show that the heterochronic expression of multiple morphogens can flexibly fuse multiple simple shapes to generate various structures emulating complex outgrowths of beetles. These findings indicate that morphogenesis through such a mechanism may have developmental stability and modularity, providing insights into the evolution of the diverse morphology of arthropods.
