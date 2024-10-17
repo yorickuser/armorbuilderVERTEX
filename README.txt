@@ -46,7 +46,7 @@ output_outcount.dat (count of output)
 
 State of the ongoing simulation is visualized simultaneously by running yorikvis at another console:
 
-cd armorbulderVERTEX/
+cd armorbuilderVERTEX/
 ~/Yorick/yorickvisf output
 
 Pressing the Mouse-Left button at the right-top "Start/End" in the window titled "Yorick 0" starts following the simulation.
