@@ -12,20 +12,26 @@ vertex3.cc (for figure 8)
 
 See the description below for execution of these programs.
 
-<Operation environment>
+<Tested environment>
 OS: Utunbu 20.04
-Application: g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, yorickvis-0.1, rlwrap-0.43
+Application: g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, mfem-3.3.2, yorickvis-0.2, rlwrap-0.43
+
+OS: MacOS (12.6.9)
+Application: g++ (Apple clang version 13.1.6), mfem-3.3.2, XQuartz-2.8.5, yorickvis-0.2, rlwrap-0.46.1
 
 <Requirement>
 Execution of the programs requires C++ compiler.
 Visualization of the simulation output requires a visualization tool "yorickvis" written in Yorick language, and rlwrap.
 
-<Local install of yorickvis>
+Under MacOS, XQuartz is also required for visualization.
+
+
+<Local install of yorickvis (not needed if already installed somewhere)>
 yorickvis can be quickly installed under armorbuilderVERTEX/
 by following commands (using git):
 
 cd armorbuilderVERTEX/
-git clone https://github.com/yorickuser/yorickvis.git -b 0.11
+git clone https://github.com/yorickuser/yorickvis.git
 cd yorickvis/
 ./install.sh
 cd ../
