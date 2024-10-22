@@ -31,7 +31,7 @@ yorickvis can be quickly installed under armorbuilderVERTEX/
 by following commands (using git):
 
 cd armorbuilderVERTEX/
-git clone https://github.com/yorickuser/yorickvis.git
+git clone https://github.com/yorickuser/yorickvis.git -b 0.12
 cd yorickvis/
 ./install.sh
 cd ../
